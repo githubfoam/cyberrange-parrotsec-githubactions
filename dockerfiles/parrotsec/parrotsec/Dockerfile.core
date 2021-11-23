@@ -11,7 +11,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
     echo "########################### METAPACKAGE INFO ###########################" && \
     apt depends parrot-tools-reversing  && \
     apt show parrot-tools-reversing && \
-    apt-cache show parrot-tools-reversing | grep Depends && \
+    # apt-cache show parrot-tools-reversing | grep Depends && \
     echo "########################### METAPACKAGE INFO ###########################"
 
 
