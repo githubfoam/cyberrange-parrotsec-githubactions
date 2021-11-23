@@ -18,13 +18,13 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
     echo "########################### METAPACKAGE INFO ###########################"
 
 
-# # custom packages
-# RUN apt-get update && apt-get install -y --no-install-recommends \
-#     ncat  \
-#     hping3
+# custom packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ncat  \
+    hping3
 
-# #testing
-# RUN hping3 -v
+#testing
+RUN hping3 -v
 
-# CMD ["/bin/bash"]
+CMD ["/bin/bash"]
 

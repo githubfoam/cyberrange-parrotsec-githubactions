@@ -10,10 +10,10 @@ RUN apt-get update -y &&\
 
 # https://github.com/ParrotSec/parrot-tools/blob/master/debian/control
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
-    apt-get install -y parrot-tools-reversing && \
+    apt-get install -y parrot-tools-wireless && \
     echo "########################### METAPACKAGE INFO ###########################" && \
-    apt depends parrot-tools-reversing  && \
-    apt show parrot-tools-reversing && \
+    apt depends parrot-tools-wireless  && \
+    apt show parrot-tools-wireless && \
     # apt-cache show parrot-tools-reversing | grep Depends && \
     echo "########################### METAPACKAGE INFO ###########################"
 

@@ -10,10 +10,10 @@ RUN apt-get update -y &&\
 
 # https://github.com/ParrotSec/parrot-tools/blob/master/debian/control
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
-    apt-get install -y parrot-tools-reversing && \
+    apt-get install -y parrot-tools-pwn && \
     echo "########################### METAPACKAGE INFO ###########################" && \
-    apt depends parrot-tools-reversing  && \
-    apt show parrot-tools-reversing && \
+    apt depends parrot-tools-pwn  && \
+    apt show parrot-tools-pwn && \
     # apt-cache show parrot-tools-reversing | grep Depends && \
     echo "########################### METAPACKAGE INFO ###########################"
 
