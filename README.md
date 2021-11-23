@@ -20,3 +20,18 @@ parrotsec-sqlmap       /bin/sh -c sqlmap $@             Exit 2
 postgresql             docker-entrypoint.sh postgres    Up         0.0.0.0:5432->5432/tcp,:::5432->5432/tcp
 webgoat                /bin/sh -c /bin/bash /home ...   Up         8080/tcp, 9090/tcp                       
 ~~~~
+
+~~~~
+https://github.com/ParrotSec/parrot-tools/blob/master/debian/control
+
+parrot-tools-reversing
+  Recommends: clang
+  Recommends: dex2jar
+  Recommends: edb-debugger
+  Recommends: gdb
+    gdb-minimal
+  Recommends: javasnoop
+  Recommends: rizin
+  Recommends: rizin-cutter
+  Recommends: smali
+  ~~~~
