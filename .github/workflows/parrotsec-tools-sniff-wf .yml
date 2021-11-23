@@ -1,4 +1,4 @@
-name: "privacy parrotsec cyberrange CI workflow"
+name: "tools-sniff parrotsec cyberrange CI workflow"
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       composedir: "dockerfiles/parrotsec"
-      composefile: "docker-compose-parrotsec-privacy.yml"    
+      composefile: "docker-compose-parrotsec-tools-sniff.yml"    
     steps:
     - uses: actions/checkout@v2
     - name: "os fingerprinting"
