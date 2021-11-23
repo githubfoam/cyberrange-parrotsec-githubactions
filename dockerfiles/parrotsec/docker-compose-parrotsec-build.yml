@@ -13,80 +13,19 @@ services:
 #             cyberrange:
 #                 ipv4_address: 192.168.35.22
 
-# #######################################
-# # parrot os cluster
-# #######################################
-
-#     parrotsec-core-build:
-#         # build: ./parrotsec
-#         build: 
-#             context: .
-#             dockerfile: ./parrotsec/Dockerfile.core       
-#         container_name: parrotsec-core
-#         tty: true       
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.23
-
-#     parrotsec-tools-sqlmap : 
-#         image: parrotsec/tools-sqlmap    
-#         container_name: parrotsec-sqlmap
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.24
-
-#     parrotsec-tools-beef : 
-#         image: parrotsec/tools-beef    
-#         container_name: parrotsec-beef
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.25
-
-#     parrotsec-tools-bettercap : 
-#         image: parrotsec/tools-bettercap    
-#         container_name: parrotsec-bettercap
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.26
-
-#     parrotsec-tools-set : 
-#         image: parrotsec/tools-set   
-#         container_name: parrotsec-set
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.27
-
-#     parrotsec-tools-metasploit : 
-#         image: parrotsec/tools-metasploit
-#         container_name: parrotsec-metasploit
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.28
-
-#     parrotsec-tools-nmap : 
-#         image: parrotsec/tools-nmap
-#         container_name: parrotsec-nmap
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.29
-
-#     parrotsec-security : 
-#         image: parrotsec/security
-#         container_name: parrotsec-security
-#         tty: true        
-#         networks:
-#             cyberrange:
-#                 ipv4_address: 192.168.35.30
-
 #######################################
 # parrot os cluster builds
 #######################################
+
+    parrotsec-privacy :
+        build: 
+            context: .
+            dockerfile: ./parrotsec/Dockerfile.privacy          
+        container_name: parrotsec-privacy 
+        tty: true
+        networks:
+            cyberrange:
+                ipv4_address: 192.168.35.89
 
     parrotsec-tools-reversing :
         build: 
