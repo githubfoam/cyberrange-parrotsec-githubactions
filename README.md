@@ -1,5 +1,15 @@
 # cyberrange-parrotsec-githubactions
 [![parrotsec cyberrange CI workflow](https://github.com/githubfoam/cyberrange-parrotsec-githubactions/actions/workflows/parrotsec-wf.yml/badge.svg?branch=main)](https://github.com/githubfoam/cyberrange-parrotsec-githubactions/actions/workflows/parrotsec-wf.yml)  
+~~~~
+        git clone https://github.com/githubfoam/cyberrange-parrotsec-githubactions.git && cd cyber*
+        sudo docker-compose --file dockerfiles/parrotsec/docker-compose-parrotsec-tools-forensic.yml  up -d
+        sudo docker-compose --file dockerfiles/parrotsec/docker-compose-parrotsec-tools-forensic.yml  ps        
+        docker exec parrotsec-forensic ls
+        docker exec parrotsec-forensic  /bin/bash -c "touch a.txt && hashdeep a.txt"
+        docker exec parrotsec-forensic  /bin/bash -c "autopsy"
+        docker exec parrotsec-forensic  /bin/bash -c "curl http://localhost:9999"
+
+~~~~
 
 ~~~~
       Name                    Command                 State                       Ports                  
