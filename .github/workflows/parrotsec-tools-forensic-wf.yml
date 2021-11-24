@@ -30,4 +30,4 @@ jobs:
         sudo mkdir /mnt/share-kali
         sudo docker-compose --file ${composedir}/${composefile}  up -d
         sudo docker-compose --file ${composedir}/${composefile}  ps
-        sudo docker exec parrotsec-privacy ls
+        sudo docker exec parrotsec-forensic ls

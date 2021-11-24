@@ -1,4 +1,4 @@
-name: "build parrotsec cyberrange CI workflow"
+name: "test parrotsec cyberrange CI workflow"
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 jobs:
 
   ubuntu-latest-job:
-    name: "build parrotsec linux compose ubuntu latest"
+    name: "test parrotsec linux compose ubuntu latest"
     runs-on: ubuntu-latest
     env:
       composedir: "dockerfiles/parrotsec"
@@ -25,9 +25,11 @@ jobs:
         cat /etc/issue
         cat /etc/os-release
         sudo apt-get install -y neofetch && neofetch   
-    - name: "docker build parrotsec compose"
+    - name: "test  build parrotsec compose"
       run: |
         git clone https://github.com/githubfoam/cyberrange-parrotsec-githubactions.git && cd cyber*
         sudo docker-compose --file ${composedir}/${composefile}  up -d
         sudo docker-compose --file ${composedir}/${composefile}  ps
-        sudo docker exec parrotsec-forensic ls
+        docker exec parrotsec-forensic ls
+        docker exec parrotsec-forensic  /bin/bash -c "ls"
+        docker exec parrotsec-forensic  /bin/bash -c "autopsy"
