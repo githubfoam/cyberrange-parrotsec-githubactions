@@ -17,11 +17,11 @@ services:
 # parrot os cluster builds
 #######################################
 
-    parrotsec-privacy :
+    parrotsec-forensic :
         build: 
             context: .
             dockerfile: ./parrotsec/Dockerfile.tools-forensic          
-        container_name: parrotsec-privacy 
+        container_name: parrotsec-forensic 
         tty: true
         networks:
             cyberrange:

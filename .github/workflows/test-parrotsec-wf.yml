@@ -1,4 +1,4 @@
-name: "tools-forensic parrotsec cyberrange CI workflow"
+name: "build parrotsec cyberrange CI workflow"
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         sudo apt-get install -y neofetch && neofetch   
     - name: "docker build parrotsec compose"
       run: |
-        sudo mkdir /mnt/share-kali
+        git clone https://github.com/githubfoam/cyberrange-parrotsec-githubactions.git && cd cyber*
         sudo docker-compose --file ${composedir}/${composefile}  up -d
         sudo docker-compose --file ${composedir}/${composefile}  ps
-        sudo docker exec parrotsec-privacy ls
+        sudo docker exec parrotsec-forensic /bin/bash
