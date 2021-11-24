@@ -1,4 +1,4 @@
-name: "tools-forensic parrotsec cyberrange CI workflow"
+name: "test tools-forensic parrotsec cyberrange CI workflow"
 
 on:
   push:
