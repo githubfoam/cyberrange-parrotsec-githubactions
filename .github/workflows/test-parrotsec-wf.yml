@@ -30,4 +30,4 @@ jobs:
         git clone https://github.com/githubfoam/cyberrange-parrotsec-githubactions.git && cd cyber*
         sudo docker-compose --file ${composedir}/${composefile}  up -d
         sudo docker-compose --file ${composedir}/${composefile}  ps
-        sudo docker exec parrotsec-forensic /bin/bash
+        sudo docker exec parrotsec-forensic ls
