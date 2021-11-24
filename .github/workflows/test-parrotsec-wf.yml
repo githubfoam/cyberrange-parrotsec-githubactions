@@ -31,6 +31,6 @@ jobs:
         sudo docker-compose --file ${composedir}/${composefile}  up -d
         sudo docker-compose --file ${composedir}/${composefile}  ps
         # docker exec parrotsec-forensic ls
-        # docker exec parrotsec-forensic  /bin/bash -c "ls"
+        docker exec parrotsec-forensic  /bin/bash -c "touch a.txt && hashdeep a.txt"
         docker exec parrotsec-forensic  /bin/bash -c "autopsy"
         docker exec parrotsec-forensic  /bin/bash -c "curl http://localhost:9999"
